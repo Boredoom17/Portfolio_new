@@ -13,12 +13,12 @@ export default function BootScreen() {
   const lines: BootLine[] = useMemo(
     () => [
       { id: 'l1', text: 'BOREDOOM RACING SYSTEMS v1.0' },
-      { id: 'l2', text: 'INITIALIZING TELEMETRY MODULE...' },
-      { id: 'l3', text: 'CALIBRATING SUSPENSION + AERO...' },
-      { id: 'l4', text: 'LOADING GARAGE ENVIRONMENT...' },
+      { id: 'l2', text: 'LOADING INTERACTIVE PORTFOLIO ENGINE...' },
+      { id: 'l3', text: 'SYNCING PROJECT GARAGE + DRIVER DATA...' },
+      { id: 'l4', text: 'MOUNTING R3F SCENE + HUD OVERLAY...' },
       { id: 'l5', text: 'DRIVER: A. CHHETRI  //  #1806' },
       { id: 'l6', text: `VEHICLE BOOT: ${String(progress).padStart(3, ' ')}%` },
-      { id: 'l7', text: progress < 100 ? 'SYSTEM CHECK: IN PROGRESS...' : '● SYSTEM CHECK: ALL GREEN' },
+      { id: 'l7', text: progress < 100 ? 'SYSTEM CHECK: IN PROGRESS...' : '● SYSTEM CHECK: READY TO RACE' },
     ],
     [progress]
   )
