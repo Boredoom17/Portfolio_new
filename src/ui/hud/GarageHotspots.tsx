@@ -11,20 +11,20 @@ type Spot = {
 }
 
 const SPOTS: Spot[] = [
-  { id: 'projects', label: 'PROJECTS', x: '43%', y: '56%' },
-  { id: 'profile', label: 'PROFILE', x: '50%', y: '48%' },
+  { id: 'projects', label: 'PROJECT GARAGE', x: '43%', y: '56%' },
+  { id: 'profile', label: 'DRIVER FILE', x: '50%', y: '48%' },
   { id: 'stack', label: 'TECH STACK', x: '56%', y: '52%' },
-  { id: 'links', label: 'LINKS', x: '60%', y: '44%' },
+  { id: 'links', label: 'PIT LINKS', x: '60%', y: '44%' },
 ]
 
 export default function GarageHotspots() {
   const [active, setActive] = useState<SpotId | null>(null)
 
   const panelTitle = useMemo(() => {
-    if (active === 'projects') return 'PROJECTS'
-    if (active === 'profile') return 'DRIVER PROFILE'
+    if (active === 'projects') return 'PROJECT GARAGE'
+    if (active === 'profile') return 'DRIVER FILE'
     if (active === 'stack') return 'TECH STACK'
-    if (active === 'links') return 'LINKS'
+    if (active === 'links') return 'PIT LINKS'
     return ''
   }, [active])
 
@@ -99,6 +99,14 @@ export default function GarageHotspots() {
                 <div key={p.id} style={{ border: '1px solid #2d2d2d', padding: 10, borderRadius: 10 }}>
                   <div style={{ color: '#fff', fontWeight: 700 }}>{p.title}</div>
                   <div style={{ color: '#9fb0a8', fontSize: 13, marginTop: 4 }}>{p.description}</div>
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ display: 'inline-block', marginTop: 8, color: '#85b8ff', fontSize: 12 }}
+                  >
+                    Open Repository
+                  </a>
                   <div style={{ marginTop: 6, display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                     {p.tags.map((t) => (
                       <span key={t} style={{ fontSize: 11, border: '1px solid #2f3d37', padding: '2px 6px', borderRadius: 8 }}>
@@ -116,7 +124,7 @@ export default function GarageHotspots() {
               <p><strong>{DRIVER.name}</strong> ({DRIVER.handle})</p>
               <p style={{ color: '#9fb0a8', marginTop: 8 }}>{DRIVER.tagline}</p>
               <p style={{ color: '#9fb0a8', marginTop: 8 }}>
-                Full-stack developer focused on shipping practical, interactive products.
+                Full-stack developer focused on practical products, ML experiments, and immersive interfaces.
               </p>
             </div>
           )}

@@ -64,7 +64,7 @@ export default function GarageHUD() {
             fontFamily: '"Rajdhani", sans-serif',
           }}
         >
-          Dubai Night GP Setup // High-Downforce // Soft Compound
+          BIM 7th Sem // Full Stack + ML // Always Shipping
         </div>
 
         {/* Divider */}
