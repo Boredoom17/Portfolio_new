@@ -3,7 +3,6 @@ import { useGameStore } from './state/gameStore'
 import GarageScene from './scenes/garage/GarageScene'
 import RaceScene from './scenes/race/RaceScene'
 import BootScreen from './ui/screens/BootScreen'
-import GarageHUD from './ui/hud/GarageHUD'
 import CountdownScreen from './ui/screens/CountdownScreen'
 import RaceHUD from './ui/hud/RaceHUD'
 import GarageHotspots from './ui/hud/GarageHotspots'
@@ -130,8 +129,7 @@ function App() {
         />
       )}
 
-      {inGarage && <GarageHUD />}
-      {inGarage && <GarageHotspots />}
+    {inGarage && <GarageHotspots />}
       {screen === 'BOOT' && <BootScreen />}
       {screen === 'COUNTDOWN' && <CountdownScreen />}
       {screen === 'RACE' && (
